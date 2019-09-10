@@ -1,0 +1,63 @@
+
+.itemset{
+
+}
+
+body {
+    background-color: white;
+}
+
+.arc {
+    stroke: #000;
+    stroke-width: 1.5px;
+}
+
+.itemset .arc{
+    opacity: 0.8;
+    cursor:pointer;
+}
+
+.itemset .arc:hover {
+    opacity: 1;
+    stroke-width: 2px;
+}
+
+.textpath {
+    font-size: 2em;
+}
+
+.itemset:hover .textpath {
+    font-size: 2.2em;
+}
+
+.item{
+    cursor:pointer;
+}
+
+.item .textpath {
+    font-size: 1.5em;
+    letter-spacing: 8px;
+}
+
+
+
+.overlay-parent {
+    display: inline-block;
+    position: relative;
+    text-align:left;
+}
+
+
+.overlay-child {
+    position: absolute;
+    width: 100%;
+}
+
+.reset-button {
+    z-index: 5;
+    width: auto !important;
+}
+
+.reset-button:hover {
+    background-color: #828282;
+}

@@ -1,0 +1,111 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>Case Study - Independence</title>
+    <meta name="description" content="Case Study - Independence">
+    <meta name="author" content="Joey De Pauw">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+    <link rel="stylesheet"
+          href="https://unpkg.com/bootstrap-material-design@0.5.10/dist/css/bootstrap-material-design.min.css"
+          crossorigin="anonymous">
+
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="static/css/circular.css">
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+
+
+</head>
+
+<body>
+
+  <div class="container">
+      <div style="margin: auto 0;">
+          <a href="index.html" class="previous round">&#8249;&nbsp; Lift</a>
+          <a href="case_context.html" class="next round">Context &nbsp;&#8250;</a>
+
+          <h1>Case Study - Independence</h1>
+
+          <div class="container">
+
+            <!--<h2>Online Security - Churn</h2>-->
+            <div class="circular-pattern-dissection" data-patterns="{&quot;items&quot;:[{&quot;icon&quot;:&quot;fas fa-walking&quot;,&quot;id&quot;:&quot;Churn=Yes&quot;,&quot;label&quot;:&quot;Churn=Yes&quot;},{&quot;icon&quot;:&quot;fas fa-lock&quot;,&quot;id&quot;:&quot;OnlineSecurity=No&quot;,&quot;label&quot;:&quot;OnlineSecurity=No&quot;},{&quot;icon&quot;:&quot;fas fa-lock&quot;,&quot;id&quot;:&quot;OnlineSecurity=Yes&quot;,&quot;label&quot;:&quot;OnlineSecurity=Yes&quot;}],&quot;itemsets&quot;:[{&quot;items&quot;:[&quot;Churn=Yes&quot;,&quot;OnlineSecurity=No&quot;,&quot;OnlineSecurity=Yes&quot;],&quot;support&quot;:0},{&quot;items&quot;:[&quot;Churn=Yes&quot;,&quot;OnlineSecurity=Yes&quot;],&quot;support&quot;:0.04188556013062615},{&quot;items&quot;:[&quot;OnlineSecurity=Yes&quot;],&quot;support&quot;:0.2866676132329973},{&quot;items&quot;:[&quot;OnlineSecurity=No&quot;,&quot;OnlineSecurity=Yes&quot;],&quot;support&quot;:0},{&quot;items&quot;:[&quot;Churn=Yes&quot;,&quot;OnlineSecurity=No&quot;],&quot;support&quot;:0.20744001135879597},{&quot;items&quot;:[&quot;OnlineSecurity=No&quot;],&quot;support&quot;:0.4966633536845094},{&quot;items&quot;:[&quot;Churn=Yes&quot;],&quot;support&quot;:0.2653698707936959}]}">
+            </div>
+
+
+            <!--<h2>Tech Support - Churn</h2>-->
+            <div class="circular-pattern-dissection" data-patterns="{&quot;items&quot;:[{&quot;icon&quot;:&quot;fas fa-walking&quot;,&quot;id&quot;:&quot;Churn=Yes&quot;,&quot;label&quot;:&quot;Churn=Yes&quot;},{&quot;icon&quot;:&quot;fas fa-headset&quot;,&quot;id&quot;:&quot;TechSupport=No&quot;,&quot;label&quot;:&quot;TechSupport=No&quot;},{&quot;icon&quot;:&quot;fas fa-headset&quot;,&quot;id&quot;:&quot;TechSupport=Yes&quot;,&quot;label&quot;:&quot;TechSupport=Yes&quot;}],&quot;itemsets&quot;:[{&quot;items&quot;:[&quot;TechSupport=No&quot;,&quot;TechSupport=Yes&quot;],&quot;support&quot;:0},{&quot;items&quot;:[&quot;Churn=Yes&quot;,&quot;TechSupport=No&quot;,&quot;TechSupport=Yes&quot;],&quot;support&quot;:0},{&quot;items&quot;:[&quot;TechSupport=No&quot;],&quot;support&quot;:0.4931137299446259},{&quot;items&quot;:[&quot;Churn=Yes&quot;,&quot;TechSupport=No&quot;],&quot;support&quot;:0.20531023711486582},{&quot;items&quot;:[&quot;TechSupport=Yes&quot;],&quot;support&quot;:0.2902172369728809},{&quot;items&quot;:[&quot;Churn=Yes&quot;,&quot;TechSupport=Yes&quot;],&quot;support&quot;:0.0440153343745563},{&quot;items&quot;:[&quot;Churn=Yes&quot;],&quot;support&quot;:0.2653698707936959}]}">
+            </div>
+          </div>
+
+          <div class="container">
+            <!--<h2>Online Security, Tech Support - Churn (Different sets are somewhat independent)</h2>-->
+            <div class="circular-pattern-dissection" data-patterns="{&quot;items&quot;:[{&quot;icon&quot;:&quot;fas fa-walking&quot;,&quot;id&quot;:&quot;Churn=Yes&quot;,&quot;label&quot;:&quot;Churn=Yes&quot;},{&quot;icon&quot;:&quot;fas fa-lock&quot;,&quot;id&quot;:&quot;OnlineSecurity=No&quot;,&quot;label&quot;:&quot;OnlineSecurity=No&quot;},{&quot;icon&quot;:&quot;fas fa-headset&quot;,&quot;id&quot;:&quot;TechSupport=No&quot;,&quot;label&quot;:&quot;TechSupport=No&quot;}],&quot;itemsets&quot;:[{&quot;items&quot;:[&quot;OnlineSecurity=No&quot;,&quot;TechSupport=No&quot;],&quot;support&quot;:0.3624875763169104},{&quot;items&quot;:[&quot;TechSupport=No&quot;],&quot;support&quot;:0.4931137299446259},{&quot;items&quot;:[&quot;Churn=Yes&quot;,&quot;OnlineSecurity=No&quot;,&quot;TechSupport=No&quot;],&quot;support&quot;:0.1774811869941786},{&quot;items&quot;:[&quot;Churn=Yes&quot;,&quot;TechSupport=No&quot;],&quot;support&quot;:0.20531023711486582},{&quot;items&quot;:[&quot;Churn=Yes&quot;,&quot;OnlineSecurity=No&quot;],&quot;support&quot;:0.20744001135879597},{&quot;items&quot;:[&quot;OnlineSecurity=No&quot;],&quot;support&quot;:0.4966633536845094},{&quot;items&quot;:[&quot;Churn=Yes&quot;],&quot;support&quot;:0.2653698707936959}]}">
+            </div>
+          </div>
+
+          <div class="container">
+            <!--<h2>Online Security, Tech Support, Internet fibre optic - Churn (Different sets are somewhat independent)</h2>-->
+            <div class="circular-pattern-dissection" data-context="true" data-patterns="{&quot;items&quot;:[{&quot;icon&quot;:&quot;fas fa-walking&quot;,&quot;id&quot;:&quot;Churn=Yes&quot;,&quot;label&quot;:&quot;Churn=Yes&quot;},{&quot;icon&quot;:&quot;fas fa-globe&quot;,&quot;id&quot;:&quot;InternetService=Fiber optic&quot;,&quot;label&quot;:&quot;InternetService=Fiber optic&quot;},{&quot;icon&quot;:&quot;fas fa-lock&quot;,&quot;id&quot;:&quot;OnlineSecurity=No&quot;,&quot;label&quot;:&quot;OnlineSecurity=No&quot;},{&quot;icon&quot;:&quot;fas fa-headset&quot;,&quot;id&quot;:&quot;TechSupport=No&quot;,&quot;label&quot;:&quot;TechSupport=No&quot;}],&quot;itemsets&quot;:[{&quot;items&quot;:[&quot;Churn=Yes&quot;,&quot;InternetService=Fiber optic&quot;,&quot;OnlineSecurity=No&quot;],&quot;support&quot;:0.15817123384921197},{&quot;items&quot;:[&quot;InternetService=Fiber optic&quot;,&quot;OnlineSecurity=No&quot;,&quot;TechSupport=No&quot;],&quot;support&quot;:0.2506034360357802},{&quot;items&quot;:[&quot;InternetService=Fiber optic&quot;,&quot;OnlineSecurity=No&quot;],&quot;support&quot;:0.3204600312366889},{&quot;items&quot;:[&quot;Churn=Yes&quot;,&quot;InternetService=Fiber optic&quot;,&quot;TechSupport=No&quot;],&quot;support&quot;:0.15632542950447254},{&quot;items&quot;:[&quot;TechSupport=No&quot;],&quot;support&quot;:0.4931137299446259},{&quot;items&quot;:[&quot;OnlineSecurity=No&quot;],&quot;support&quot;:0.4966633536845094},{&quot;items&quot;:[&quot;Churn=Yes&quot;],&quot;support&quot;:0.2653698707936959},{&quot;items&quot;:[&quot;OnlineSecurity=No&quot;,&quot;TechSupport=No&quot;],&quot;support&quot;:0.3624875763169104},{&quot;items&quot;:[&quot;InternetService=Fiber optic&quot;],&quot;support&quot;:0.4395854039471816},{&quot;items&quot;:[&quot;Churn=Yes&quot;,&quot;OnlineSecurity=No&quot;,&quot;TechSupport=No&quot;],&quot;support&quot;:0.1774811869941786},{&quot;items&quot;:[&quot;Churn=Yes&quot;,&quot;TechSupport=No&quot;],&quot;support&quot;:0.20531023711486582},{&quot;items&quot;:[&quot;Churn=Yes&quot;,&quot;InternetService=Fiber optic&quot;],&quot;support&quot;:0.18415447962515974},{&quot;items&quot;:[&quot;Churn=Yes&quot;,&quot;InternetService=Fiber optic&quot;,&quot;OnlineSecurity=No&quot;,&quot;TechSupport=No&quot;],&quot;support&quot;:0.13786738605707796},{&quot;items&quot;:[&quot;InternetService=Fiber optic&quot;,&quot;TechSupport=No&quot;],&quot;support&quot;:0.31662643759761466},{&quot;items&quot;:[&quot;Churn=Yes&quot;,&quot;OnlineSecurity=No&quot;],&quot;support&quot;:0.20744001135879597}]}">
+            </div>
+          </div>
+      </div>
+    </div>
+
+
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://d3js.org/d3-path.v1.min.js"></script>
+<script src="https://d3js.org/d3-shape.v1.min.js"></script>
+<script src="https://d3js.org/d3-color.v1.min.js"></script>
+<script src="https://d3js.org/d3-interpolate.v1.min.js"></script>
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+<script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+
+<script src="static/js/circular.js"></script>
+
+
+<script type="text/javascript">
+
+    $(function () {
+        console.log(colors(getItemsetId(["InternetService=Fiber optic", "TechSupport=No"])));
+        console.log(colors("2"));
+        console.log(colors(getItemsetId(["InternetService=Fiber optic", "OnlineSecurity=No"])));
+
+        $(".circular-pattern-dissection").each(function(){
+            renderPattern($(this));
+        });
+    });
+
+    function renderPattern(el){
+      var context = el.data("context") === true;
+      console.log(context);
+      circular(d3.select(el.parent()[0]), el.data("patterns"), 800, context);
+    }
+
+</script>
+
+</body>
+</html>
+
+
+<!--
+{
+"items":
+[
+{"icon":"empty","id":"A","label":"A"},
+{"icon":"empty","id":"B","label":"B"},
+{"icon":"empty","id":"C","label":"C"},
+{"icon":"empty","id":"D","label":"D"}
+],
+"itemsets":[{"items":["A","C","D"],"support":0.3907766990291262},{"items":["C","D"],"support":0.7669902912621359},{"items":["A"],"support":0.5242718446601942},{"items":["B","C"],"support":0.5097087378640777},{"items":["B","D"],"support":0.6043689320388349},{"items":["B"],"support":0.6043689320388349},{"items":["D"],"support":0.9368932038834952},{"items":["A","C"],"support":0.42475728155339804},{"items":["A","D"],"support":0.4830097087378641},{"items":["C"],"support":0.8228155339805825},{"items":["B","C","D"],"support":0.5097087378640777},{"items":["A","B"],"support":0.3640776699029126},{"items":["A","B","D"],"support":0.3640776699029126},{"items":["A","B","C"],"support":0.30097087378640774},{"items":["A","B","C","D"],"support":0.30097087378640774}]}
+
+-->

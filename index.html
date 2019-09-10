@@ -1,0 +1,93 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>Case Study - Lift</title>
+    <meta name="description" content="Case Study - Lift">
+    <meta name="author" content="Joey De Pauw">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+    <link rel="stylesheet"
+          href="https://unpkg.com/bootstrap-material-design@0.5.10/dist/css/bootstrap-material-design.min.css"
+          crossorigin="anonymous">
+
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="static/css/circular.css">
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+    <div style="margin: auto 0;">
+      <!-- <a href="#" class="previous round">&#8249;</a> -->
+      <a href="case_independence.html" class="next round">Independence &nbsp;&#8250;</a>
+
+      <div>
+        <h1>Case Study - Lift</h1>
+
+        <!--<h2>Partner - Dependents</h2>-->
+        <div class="circular-pattern-dissection" style="display:inline;" data-patterns="{&quot;items&quot;:[{&quot;icon&quot;:&quot;fas fa-child&quot;,&quot;id&quot;:&quot;Dependents=Yes&quot;,&quot;label&quot;:&quot;Dependents=Yes&quot;},{&quot;icon&quot;:&quot;fas fa-people-carry&quot;,&quot;id&quot;:&quot;Partner=No&quot;,&quot;label&quot;:&quot;Partner=No&quot;},{&quot;icon&quot;:&quot;fas fa-people-carry&quot;,&quot;id&quot;:&quot;Partner=Yes&quot;,&quot;label&quot;:&quot;Partner=Yes&quot;}],&quot;itemsets&quot;:[{&quot;items&quot;:[&quot;Partner=No&quot;,&quot;Partner=Yes&quot;],&quot;support&quot;:0},{&quot;items&quot;:[&quot;Partner=Yes&quot;],&quot;support&quot;:0.4830327985233565},{&quot;items&quot;:[&quot;Dependents=Yes&quot;],&quot;support&quot;:0.2995882436461735},{&quot;items&quot;:[&quot;Dependents=Yes&quot;,&quot;Partner=No&quot;],&quot;support&quot;:0.05125656680391878},{&quot;items&quot;:[&quot;Dependents=Yes&quot;,&quot;Partner=No&quot;,&quot;Partner=Yes&quot;],&quot;support&quot;:0},{&quot;items&quot;:[&quot;Dependents=Yes&quot;,&quot;Partner=Yes&quot;],&quot;support&quot;:0.2483316768422547},{&quot;items&quot;:[&quot;Partner=No&quot;],&quot;support&quot;:0.5169672014766434}]}">
+        </div>
+
+        <!--<h2>Partner - Dependents - Contract</h2>-->
+        <div class="circular-pattern-dissection" style="display:inline;" data-patterns="{&quot;items&quot;:[{&quot;icon&quot;:&quot;fas fa-file-signature&quot;,&quot;id&quot;:&quot;Contract=Two year&quot;,&quot;label&quot;:&quot;Contract=Two year&quot;},{&quot;icon&quot;:&quot;fas fa-child&quot;,&quot;id&quot;:&quot;Dependents=Yes&quot;,&quot;label&quot;:&quot;Dependents=Yes&quot;},{&quot;icon&quot;:&quot;fas fa-people-carry&quot;,&quot;id&quot;:&quot;Partner=Yes&quot;,&quot;label&quot;:&quot;Partner=Yes&quot;}],&quot;itemsets&quot;:[{&quot;items&quot;:[&quot;Contract=Two year&quot;],&quot;support&quot;:0.24066448956410622},{&quot;items&quot;:[&quot;Contract=Two year&quot;,&quot;Dependents=Yes&quot;,&quot;Partner=Yes&quot;],&quot;support&quot;:0.10237114865824222},{&quot;items&quot;:[&quot;Partner=Yes&quot;],&quot;support&quot;:0.4830327985233565},{&quot;items&quot;:[&quot;Dependents=Yes&quot;],&quot;support&quot;:0.2995882436461735},{&quot;items&quot;:[&quot;Contract=Two year&quot;,&quot;Partner=Yes&quot;],&quot;support&quot;:0.16924605991764874},{&quot;items&quot;:[&quot;Contract=Two year&quot;,&quot;Dependents=Yes&quot;],&quot;support&quot;:0.11216811018032088},{&quot;items&quot;:[&quot;Dependents=Yes&quot;,&quot;Partner=Yes&quot;],&quot;support&quot;:0.2483316768422547}]}">
+        </div>
+      </div>
+    </div>
+</div>
+
+
+
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://d3js.org/d3-path.v1.min.js"></script>
+<script src="https://d3js.org/d3-shape.v1.min.js"></script>
+<script src="https://d3js.org/d3-color.v1.min.js"></script>
+<script src="https://d3js.org/d3-interpolate.v1.min.js"></script>
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+<script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+
+<script src="static/js/circular.js"></script>
+
+
+<script type="text/javascript">
+
+    $(function () {
+        console.log(colors("2"));
+
+        $(".circular-pattern-dissection").each(function(){
+            renderPattern($(this));
+        });
+    });
+
+    function renderPattern(el){
+        circular(d3.select(el.parent()[0]), el.data("patterns"), 800, false);
+    }
+
+</script>
+
+</body>
+</html>
+
+
+<!--
+{
+"items":
+[
+{"icon":"empty","id":"A","label":"A"},
+{"icon":"empty","id":"B","label":"B"},
+{"icon":"empty","id":"C","label":"C"},
+{"icon":"empty","id":"D","label":"D"}
+],
+"itemsets":[{"items":["A","C","D"],"support":0.3907766990291262},{"items":["C","D"],"support":0.7669902912621359},{"items":["A"],"support":0.5242718446601942},{"items":["B","C"],"support":0.5097087378640777},{"items":["B","D"],"support":0.6043689320388349},{"items":["B"],"support":0.6043689320388349},{"items":["D"],"support":0.9368932038834952},{"items":["A","C"],"support":0.42475728155339804},{"items":["A","D"],"support":0.4830097087378641},{"items":["C"],"support":0.8228155339805825},{"items":["B","C","D"],"support":0.5097087378640777},{"items":["A","B"],"support":0.3640776699029126},{"items":["A","B","D"],"support":0.3640776699029126},{"items":["A","B","C"],"support":0.30097087378640774},{"items":["A","B","C","D"],"support":0.30097087378640774}]}
+
+-->
