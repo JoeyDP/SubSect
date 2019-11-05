@@ -832,7 +832,7 @@ function arraysEqual(a, b) {
 
 
 function getValueLabel(label){
-    if(DEBUG){
+    if(DEBUG && label.length > 25){
         let labels = label.split("=");
         return labels[labels.length - 1];
     }else{
