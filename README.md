@@ -14,12 +14,12 @@ Otherwise you can load the `circular.css` and `circular.js` files and call the v
 var body = d3.select("body");
 
 circular(
-  body,
+  body,     // element to append svg to
   {
       "items": [
-          {"id": "A", "label": "Apples", "icon": "plane"},
-          {"id": "B", "label": "Pears", "icon": "bicycle"},
-          {"id": "C", "label": "Oranges", "icon": "car"}
+          {"id": "A", "label": "Airplane", "icon": "plane"},
+          {"id": "B", "label": "Bicycle", "icon": "bicycle"},
+          {"id": "C", "label": "Car", "icon": "car"}
       ],
       "itemsets": [
           {
@@ -52,8 +52,8 @@ circular(
           }
       ]
   },
-  800,        // size
-  true       // use context circle
+  800,      // size
+  true      // use context circle
 );
 ```
 The full example can be seen [here](example.html).

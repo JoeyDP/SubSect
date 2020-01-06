@@ -44,12 +44,12 @@
     var body = d3.select("body");
 
     circular(
-        body,
+        body,     // element to append svg to
         {
             "items": [
-                {"id": "A", "label": "Apples", "icon": "plane"},
-                {"id": "B", "label": "Pears", "icon": "bicycle"},
-                {"id": "C", "label": "Oranges", "icon": "car"}
+                {"id": "A", "label": "Airplane", "icon": "plane"},
+                {"id": "B", "label": "Bicycle", "icon": "bicycle"},
+                {"id": "C", "label": "Car", "icon": "car"}
             ],
             "itemsets": [
                 {
@@ -82,8 +82,8 @@
                 }
             ]
         },
-        800,        // size
-        true       // use context circle
+        800,      // size
+        true      // use context circle
     );
 
 </script>
