@@ -5,12 +5,9 @@ const DIAMETER = 700;
 const CONTEXT_DIAMETER = 2/3 * DIAMETER;
 const CONTEXT_POSITION_X = -(DIAMETER + CONTEXT_DIAMETER) / 2 - 2 * MARGIN;
 
-// const RENDER_WIDTH = DIAMETER + CONTEXT_DIAMETER + 4 * MARGIN;
 const RENDER_HEIGHT = DIAMETER + 2 * MARGIN;
 
 const ANIMATION_DURATION = 1000;
-
-DEBUG = true;
 
 var colors = d3.scaleOrdinal(d3.schemeCategory10);
 
@@ -40,10 +37,6 @@ function circular(element, data, size=800, context=true) {
     const overlayDiv = div.append("div")
         .classed("overlay-child showOnAncestorHover", true);
 
-    // if (DEBUG) {
-    //    overlayDiv.style("display", "none");
-    // }
-
     const visualization = new Visualization(svg, overlayDiv, data.items, data.itemsets, context);
 }
 
@@ -67,7 +60,6 @@ class Visualization {
             this.mainCircle.setContextCircle(this.contextCircle);
             this.contextCircle.setMainCircle(this.mainCircle);
         }
-
 
         this.init();
     }
@@ -199,7 +191,6 @@ class Circular {
         this.outerRadius = diameter / 2;
         this.radiusScale = d3.scaleLinear().range([this.labelRadius, this.outerRadius]);
 
-
         this.arcs = [];
     }
 
@@ -329,7 +320,7 @@ class Circular {
         this.arcs.push(this.itemLabels);
 
         // render icon or full label
-        function hasIcon(d){return 'icon' in d && d.icon != "empty";}
+        function hasIcon(d){return 'icon' in d && d.icon !== "empty";}
 
         this.itemLabels.filter(hasIcon)
         	.attr('dominant-baseline', 'central')
@@ -416,7 +407,7 @@ class Circular {
             .text(function (d) {
                 // if(d.items.length === 1 && this.rootItemIds.includes(d.items[0])){
                 if(d.items === this.rootItemset.items){
-                    return DEBUG ? "" : 1;
+                    return "";
                 }else if(d.support > 0){
                     return d.support.toFixed(2);
                 }
@@ -537,13 +528,10 @@ class Circular {
                     return getValueLabel(this.getItem(itemIds[0]).label);
                 }else if(itemIds.length === 0){
                     /// Root item
-                    if(DEBUG){
-                        return "";
-                    }else{
-                        let items = this.resolveItemIds(this.rootItemset.items);
-                        let labels = items.map(x => getValueLabel(x.label));
-                        return labels.join(", ");
-                    }
+                    return "";
+                    // let items = this.resolveItemIds(this.rootItemset.items);
+                    // let labels = items.map(x => getValueLabel(x.label));
+                    // return labels.join(", ");
                 }
             }.bind(this))
     }
@@ -797,23 +785,6 @@ function faUnicode(name) {
 	return char;// .charCodeAt(0);
 }
 
-
-function arraysEqual(a, b) {
-    if (a === b) return true;
-    if (a == null || b == null) return false;
-    if (a.length != b.length) return false;
-
-    // If you don't care about the order of the elements inside
-    // the array, you should sort both arrays here.
-    // Please note that calling sort on an array will modify that array.
-    // you might want to clone your array first.
-
-    for (var i = 0; i < a.length; ++i) {
-        if (a[i] !== b[i]) return false;
-    }
-    return true;
-}
-
 function arraysEqual(a, b) {
     if (a === b) return true;
     if (a == null || b == null) return false;
@@ -830,9 +801,9 @@ function arraysEqual(a, b) {
     return true;
 }
 
-
 function getValueLabel(label){
-    if(DEBUG && label.length > 25){
+    // TODO: cutoff 25 hardcoded for now, should be based on space available
+    if(label.length > 25){
         let labels = label.split("=");
         return labels[labels.length - 1];
     }else{

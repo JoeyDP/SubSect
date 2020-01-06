@@ -1,5 +1,6 @@
+/* Stylesheet for the circular visualization */
 
-.itemset{
+.itemset {
 
 }
 
@@ -12,9 +13,9 @@ body {
     stroke-width: 1.5px;
 }
 
-.itemset .arc{
+.itemset .arc {
     opacity: 0.8;
-    cursor:pointer;
+    cursor: pointer;
 }
 
 .itemset .arc:hover {
@@ -30,8 +31,8 @@ body {
     font-size: 2.2em;
 }
 
-.item{
-    cursor:pointer;
+.item {
+    cursor: pointer;
 }
 
 .item .textpath {
@@ -39,12 +40,10 @@ body {
     letter-spacing: 8px;
 }
 
-
-
 .overlay-parent {
     display: inline-block;
     position: relative;
-    text-align:left;
+    text-align: left;
 }
 
 
