@@ -1,0 +1,92 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>Example</title>
+    <meta name="description" content="Example">
+    <meta name="author" content="Joey De Pauw">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+    <link rel="stylesheet"
+          href="https://unpkg.com/bootstrap-material-design@0.5.10/dist/css/bootstrap-material-design.min.css"
+          crossorigin="anonymous">
+
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="static/css/circular.css">
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+
+</head>
+
+<body>
+
+
+
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://d3js.org/d3-path.v1.min.js"></script>
+<script src="https://d3js.org/d3-shape.v1.min.js"></script>
+<script src="https://d3js.org/d3-color.v1.min.js"></script>
+<script src="https://d3js.org/d3-interpolate.v1.min.js"></script>
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+<script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+
+<script src="static/js/circular.js"></script>
+
+
+<script type="text/javascript">
+    var body = d3.select("body");
+
+    circular(
+        body,
+        {
+            "items": [
+                {"id": "A", "label": "Apples", "icon": "plane"},
+                {"id": "B", "label": "Pears", "icon": "bicycle"},
+                {"id": "C", "label": "Oranges", "icon": "car"}
+            ],
+            "itemsets": [
+                {
+                    "items": ["C"],
+                    "support": 0.4830097087378641
+                },
+                {
+                    "items": ["A", "B"],
+                    "support": 0.5339805825242718
+                },
+                {
+                    "items": ["C", "A"],
+                    "support": 0.4029126213592233
+                },
+                {
+                    "items": ["B"],
+                    "support": 0.6650485436893204
+                },
+                {
+                    "items": ["C", "A", "B"],
+                    "support": 0.25
+                },
+                {
+                    "items": ["C", "B"],
+                    "support": 0.30339805825242716
+                },
+                {
+                    "items": ["A"],
+                    "support": 0.8009708737864077
+                }
+            ]
+        },
+        800,        // size
+        true       // use context circle
+    );
+
+</script>
+
+</body>
+</html>
